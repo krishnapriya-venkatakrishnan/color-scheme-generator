@@ -1,0 +1,164 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.color-specification {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    background-color: #1F2937;
+    align-items: center;
+    height: 10vh;
+}
+
+.inp-color {
+    height: 20px;
+}
+
+#get-colors {
+    background-color: #3D4B60;
+    color: white;
+    padding: 0.125em 1em;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+
+/* custom select element using divs and spans */
+.custom-select-wrapper {
+  position: relative;
+  user-select: none;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.custom-select__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.custom-select__trigger>span {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.custom-select.open .custom-options {
+  display: flex;
+}
+
+.custom-options {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  color: white;;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.custom-option {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background: #1F2937;
+  padding: 0.5em 1em;
+}
+
+.custom-option.selected, .highlight {
+  color: red;
+}
+
+i {
+    color: #1F2937;
+}
+
+.fa-chevron-down {
+  color: white;
+  transform: translate(0, 45%);
+  cursor: pointer;
+}
+
+#copy {
+  border: none;
+  resize: none;
+  height: 0;
+}
+
+/* color scheme */
+
+#color-scheme {
+    /* height: 85vh; */
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 90% 10%;
+    
+}
+
+#color-scheme:hover{
+    cursor: pointer;
+}
+
+.hex {
+    background-color: #1F2937;
+    color: white;
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    justify-content: center;
+    text-transform: lowercase;
+}
+
+.disappearCopy {
+    height: 50px !important;
+    width: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 0.75rem;
+    border: 1px solid black;
+    resize: none;
+    padding: 10px 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    animation: disappear 3s forwards;
+    user-select: none;
+    pointer-events: none;
+    caret-color: transparent; 
+}
+@keyframes disappear {
+    from {
+        opacity: 1;
+        visibility: visible;
+    } 
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
