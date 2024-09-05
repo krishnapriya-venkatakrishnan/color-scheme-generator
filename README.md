@@ -10,4 +10,4 @@ Users can copy the generated hex color values to their clipboard with ease.
 - Copy to Clipboard: Users can click on any generated color to copy its hex value to the clipboard.
 
 ## Live Demo:
-(https://scrimba-krishna-v-color-scheme-gen.netlify.app/)
+(https://scrimba-krishna-v-col-scheme-gen.netlify.app/)
